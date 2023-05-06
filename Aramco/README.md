@@ -1,6 +1,6 @@
-# Aramco Data Science intern home task
+## Aramco Data Science intern home task
 
-## Context
+### Context
 
 In the oil industry, production wells, injection wells, and reservoirs work together to extract oil or gas from underground reserves. 
 
@@ -12,7 +12,7 @@ The reservoir is the underground rock formation that holds the oil or gas. It is
 
 Together, these components work in a cycle to extract hydrocarbons from the reservoir. Injection wells inject fluids into the reservoir, which pushes the oil or gas towards the production wells. The production wells extract the hydrocarbons from the reservoir, and the cycle continues.
 
-## Reservoir simulation
+### Reservoir simulation
 
 Reservoir simulation is a mathematical model used to predict the flow of fluids in a reservoir over time. It's used to predict the performance of the reservoir and optimize the extraction process. In the home task, you are provided with synthetic reservoir data containing multiple reservoir simulations with different activation times of injector well `I3`. 
 
@@ -26,7 +26,7 @@ Adding more production or injection wells to a reservoir can affect flow rates a
 
 Now that you have a basic understanding of these concepts, you can proceed with the home task.
 
-## The task
+### The task
 
 Your task is to come up with the methodology to select features and evaluate time lags which should be used to build a robust predictive model for forecasting the flow rates of production wells `P1` and `P2` for a 3-step horizon using provided reservoir simulation data. You may choose to forecast oil or liquid flowrates.
 
@@ -40,7 +40,7 @@ You may consider utilizing the following ideas to improve your solution to the p
 - Feature engineering of production and injection data.
 - Change or transform the target.
 
-## Requirements
+### Requirements
 You are expected to address the following points in your solution:
 
 1. Compare your model to a baseline model of your choice. Demonstrate statistically that your model outperforms the baseline.
@@ -48,7 +48,7 @@ You are expected to address the following points in your solution:
 3. Propose improvements to your model. This should include any insights gained from the model and any recommendations for further enhancements.
 4. Provide a concise summary of the model and the results at the end of the Jupyter notebook (1 paragraph of text in English).
    
-## Data description
+### Data description
 
 The dataset `data.csv`contains features related to production of 5 wells different. The features available in the dataset are as follows:
 
