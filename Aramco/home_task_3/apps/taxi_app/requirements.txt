@@ -1,0 +1,6 @@
+etna==1.15.0
+streamlit
+path.py
+briefcase
+pyinstaller
+
