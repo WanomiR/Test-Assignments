@@ -1,0 +1,44 @@
+{
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#cecece",
+    "editorBracketHighlight.foreground2": "#cecece",
+    "editorBracketHighlight.foreground3": "#cecece",
+    "[Twilight Pro]": {
+      "editor.background": "#1a1a1afc",
+      "notebook.cellEditorBackground": "#070707",
+      "notebook.cellBorderColor": "#0e0e0e",
+      "notebook.focusedEditorBorder": "#3a3a3af9",
+      "notebook.focusedCellBorder": "#575757f9",
+      "editor.selectionBackground": "#3e3e3ef9"
+    },
+    "[JupyterLab Light]": {
+      "notebook.cellEditorBackground": "#f6f6f6fc",
+      "notebook.cellBorderColor": "#fbfbfbf9",
+      "editorBracketHighlight.foreground1": "#2b2b2b",
+      "editorBracketHighlight.foreground2": "#2b2b2b",
+      "editorBracketHighlight.foreground3": "#2b2b2b"
+    },
+    "[Atom One Dark]": {
+      "statusBar.background": "#242424",
+      "editor.background": "#171717fc",
+      "editorCursor.foreground": "#b8b8b8"
+    },
+    "[Monokai Dimmed]": {
+      "statusBar.background": "#242424",
+      "editor.background": "#151515fc",
+      "sideBar.background": "#1c1c1cfc",
+      "sideBar.foreground": "#b7b7b7",
+      "sideBarTitle.foreground": "#959595",
+      "sideBarSectionHeader.background": "#2c2c2c",
+      "tab.inactiveBackground": "#2e2e2e"
+    },
+    "[Atom One Light]": {
+      "editorBracketHighlight.foreground1": "#2b2b2b",
+      "editorBracketHighlight.foreground2": "#2b2b2b",
+      "editorBracketHighlight.foreground3": "#2b2b2b"
+    },
+    "activityBar.background": "#101010",
+    "titleBar.activeBackground": "#151515",
+    "titleBar.activeForeground": "#F9F9F9"
+  }
+}

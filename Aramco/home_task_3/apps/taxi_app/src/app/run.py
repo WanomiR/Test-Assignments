@@ -21,7 +21,7 @@ st.title("Taxi orders forecasting")
 st.caption("with ETNA and CatBoost")
 
 # data loading
-input_data = pd.read_csv("./src/app/taxi_hour.csv")
+input_data = pd.read_csv("taxi_hour.csv")
 df = TSDataset.to_dataset(input_data)
 # for now filter the data here manually
 ts = TSDataset(df["2018-05-01":"2018-05-31"], freq="1H")
@@ -57,7 +57,7 @@ transforms = [
 ]
 
 model = Pipeline(
-    model=CatBoostPerSegmentModel(),
+    model=CatBoostPerSegmentModel(allow_writing_files=False),
     transforms=transforms,
     horizon=HORIZON,
 )
