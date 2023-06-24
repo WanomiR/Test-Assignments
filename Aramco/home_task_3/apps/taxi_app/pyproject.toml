@@ -16,3 +16,6 @@ requires = [
             'path.py',
             'streamlit',
 ]
+
+[streamlit.theme]
+base="light"

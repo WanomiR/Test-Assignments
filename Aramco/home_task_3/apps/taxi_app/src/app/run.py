@@ -51,7 +51,7 @@ col1, col2 = st.columns(2)
 with col1:
   date_start = st.date_input(
     "From",
-    value=datetime.date(2018, 3, 1),
+    value=datetime.date(2018, 6, 1),
     min_value=datetime.date(2018, 3, 1),
     max_value=datetime.date(2018, 7, 1),
   )
@@ -59,7 +59,7 @@ with col1:
 with col2:
   date_end = st.date_input(
     "To",
-    value=datetime.date(2018, 4, 30),
+    value=datetime.date(2018, 8, 31),
     min_value=datetime.date(2018, 4, 30),
     max_value=datetime.date(2018, 8, 31),
   )
@@ -93,7 +93,7 @@ train_ts, test_ts = ts.train_test_split(
 
 # ---------------------------------------- #
 # backtest window selecting function
-def sliding_window_splitter(window_size: int = 2, n_folds: int = 3):
+def sliding_window_splitter(window_size: int, n_folds: int):
 
   masks = []
   window_size *= HORIZON
@@ -192,7 +192,7 @@ with col1:
     "Select the backtest window size",
     min_value=1,
     max_value=5,
-    value=2,
+    value=1,
   )
 
 with col2:
@@ -200,7 +200,7 @@ with col2:
     "Select the number of folds",
     min_value=1,
     max_value=5,
-    value=3,
+    value=1,
   )
 
 masks = sliding_window_splitter(window_size=window_size, n_folds=n_folds)
@@ -209,9 +209,10 @@ metrics_df, forecast_ts, _ = pipeline.backtest(
 )
 score = metrics_df["SMAPE"].mean()
 
-st.subheader("Your forecast")
+st.subheader("Forecast visualization")
 
 st.pyplot(
   plot_backtest(forecast_ts, ts, history_len=HORIZON*3)
 )
-st.subheader(f"Averages SMAPE:  {score:.2f}%")
+st.subheader(f"Average SMAPE:  {score:.2f}%")
+st.caption("SMAPE – Symmetric Mean Absolute Percentage Error")
