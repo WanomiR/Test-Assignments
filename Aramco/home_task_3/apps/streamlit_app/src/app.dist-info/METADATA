@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Briefcase-Version: 0.3.14
+Name: app
+Formal-Name: app
+App-ID: com.example.app
+Version: 0.0.1
+Home-page: https://example.com/wce
+Download-URL: https://example.com/wce
+Author: Jane Developer
+Author-email: jane@apple.com
+Summary: My first application
