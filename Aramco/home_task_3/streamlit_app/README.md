@@ -40,7 +40,7 @@ $ pyi-makespec --onefile \
 ```bash
 $ pyinstaller --clean script.spec
 ```
-9. Make test runs with `briefcase`:
+9. Conduct test runs with `briefcase`:
 	1. Run application in developer mode:
 	```bash
 	$ briefcase dev
