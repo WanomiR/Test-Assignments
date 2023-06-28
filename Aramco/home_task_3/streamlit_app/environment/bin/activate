@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/ioann/GitHub/test_assignments/aramco/home_task_3/apps/streamlit_app/environment"
+VIRTUAL_ENV="/Users/ioann/GitHub/test_assignments/aramco/home_task_3/streamlit_app/environment"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

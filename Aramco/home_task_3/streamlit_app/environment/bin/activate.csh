@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/ioann/GitHub/test_assignments/aramco/home_task_3/apps/streamlit_app/environment"
+setenv VIRTUAL_ENV "/Users/ioann/GitHub/test_assignments/aramco/home_task_3/streamlit_app/environment"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

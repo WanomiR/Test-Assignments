@@ -24,12 +24,7 @@ from etna.transforms import (
 # to make plots with ETNA models
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-# ---------------------------------------- #
-# temporary styling
-# plt.style.use("dark_background")
-# plt.rcParams["grid.alpha"] = 0.25
-# ---------------------------------------- #
-
+# page title and project description
 st.title("Taxi orders forecasting")
 st.caption("with ETNA and CatBoost")
 st.text("Build your model to predict the number of taxi orders for the next 24 hours 🚕")
@@ -42,8 +37,7 @@ ts = TSDataset(df, freq="H")
 
 HORIZON = 24
 
-# ---------------------------------------- #
-# select the data range
+# data range selection
 st.header("Data range")
 st.text("Pick a range of dates to model")
 
@@ -65,10 +59,8 @@ with col2:
     max_value=datetime.date(2018, 8, 31),
   )
 
-# ---------------------------------------- #
-# for now filter the data here manually
+# filter the data based on selected range
 ts = TSDataset(ts[date_start:date_end], freq="H")
-# ---------------------------------------- #
 
 
 st.subheader("Your data sample")
@@ -80,20 +72,11 @@ st.write(
   )
 st.divider()
 
-############################################
 # ---------------------------------------- #
-# model training part
-
-# split the data
-train_ts, test_ts = ts.train_test_split(
-    train_start="2018-03-01",
-    train_end="2018-05-30",
-    test_start="2018-05-31",
-    test_end="2018-05-31"
-)
-
+# modeling part
 # ---------------------------------------- #
-# backtest window selecting function
+
+# function for generating the backtest window
 def sliding_window_splitter(window_size: int = 2, n_folds: int = 3):
 
   masks = []
@@ -116,11 +99,9 @@ def sliding_window_splitter(window_size: int = 2, n_folds: int = 3):
 
   return masks
 
-# ---------------------------------------- #
-# define transformations
-
+# data transformations selection
 st.header("Features")
-st.text("Choose data transforms")
+st.text("Choose data transformation methods")
 
 col1, col2 = st.columns(2)
 
@@ -154,7 +135,7 @@ transform_options = st.multiselect(
   ],
 )
 
-
+# dictionary with transformation methods
 transforms_dict = dict(
     LagTransform=LagTransform(
       in_column="target", 
@@ -168,13 +149,18 @@ transforms_dict = dict(
     DensityOutliersTransform=DensityOutliersTransform(in_column="target", distance_coef=3.0),
 )
 
-transform_options += ["LagTransform", "MeanTransform"]# st.write(" ", transforms_dict)
-transforms = [t for k, t in transforms_dict.items() if k in transform_options]
+# default transformations
+transform_options += ["LagTransform", "MeanTransform"] 
+# additional transformations
+transforms = [t for k, t in transforms_dict.items() if k in transform_options] 
+
 
 st.divider()
 
 # ---------------------------------------- #
-# fit the model
+# model fitting and evaluation
+# ---------------------------------------- #
+
 st.header("Model performance")
 st.text("Decide on validation parameters and plot results")
 
