@@ -1,7 +1,7 @@
-# Application building instructions
+# Instructions for building the app
 1. Install python.
 2. From the project directory, create a new Python environment using Python version `3.10`:
-	```bash
+```bash
 $ python3.10 -m venv environment
 ```
 3. Activate the newly created environment:
@@ -36,7 +36,7 @@ $ pyi-makespec --onefile \
 --recursive-copy-metadata path \
 --paths . src/app/script.py
 ```
-8. Prepare the app files:
+8. Prepare application files:
 ```bash
 $ pyinstaller --clean script.spec
 ```
