@@ -3,4 +3,3 @@ streamlit
 path.py
 briefcase
 pyinstaller
-

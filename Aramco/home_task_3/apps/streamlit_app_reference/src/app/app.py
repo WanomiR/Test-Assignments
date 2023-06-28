@@ -12,7 +12,7 @@ if __name__ == "__main__":
     sys.argv = [
         "streamlit",
         "run",
-        resolve_path("🚕 Taxi Orders Prediction.py"),
+        resolve_path("run.py"),
         "--global.developmentMode=false",
     ]
     sys.exit(stcli.main())
