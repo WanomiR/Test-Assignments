@@ -34,7 +34,6 @@
 6. Run the application script with Streamlit to make sure that it works:
 	```bash
 	$ cd srs/app
- 	$ dir src/app
 	$ streamlit run sript.py
 	```
 7. Return to the root directory and run the `Pyinstaller` command to create the application config:
