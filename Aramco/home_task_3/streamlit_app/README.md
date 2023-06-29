@@ -1,16 +1,25 @@
 # Instructions for building the app
-1. Install python.
-2. From the project directory, create a new Python environment using Python version `3.10`:
+1. Install Python: [macOS](https://www.python.org/downloads/macos/) / [Windows](https://www.python.org/downloads/windows/)
+2. From the **project’s root directory**, create a new Python environment using `3.10` Python version:
+	> Note: `$` character marks the beginning of a command, you don’t need to use it in the command itself.
+
+	macOS
 ```bash
 $ python3.10 -m venv environment
 ```
+	Windows
+```
+$ pip install virtualenv
+$ virtualenv environment --python=python3.10
+```
 3. Activate the newly created environment:
+	macOS
 ```bash
 $ source environment/bin/activate
 ```
-for windows:
+	Windows
 ```
-$ \venv\Scripts\activate.bat
+$ environment\Scripts\activate.bat
 ```
 4. Upgrade `pip`:
 ```bash
@@ -45,21 +54,36 @@ $ pyi-makespec --onefile \
 $ pyinstaller --clean script.spec
 ```
 9. Conduct test runs with `briefcase`:
-	1. Run application in developer mode:
+	Run application in developer mode:
 	```bash
 	$ briefcase dev
 	```
-	2. Build and run application in distribution mode:
+	Build and run application in distribution mode:
 	```bash
 	$ briefcase run
 	```
 10. Build the app and generate executable:
 ```bash
 $ briefcase build
+```
+macOS
+```
+$ briefcase package --adhoc-sign
+```
+Windows
+```
 $ briefcase package
 ```
 11. Deactivate Python environment and run your application:
-```bash
+```
 $ deactivate
+```
+MacOS
+```bash
 $ open dist/app-0.0.1.dmg
 ```
+Windows
+```
+$ dist/app-0.0.1.msi
+```
+
