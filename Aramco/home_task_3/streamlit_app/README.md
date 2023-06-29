@@ -8,6 +8,10 @@ $ python3.10 -m venv environment
 ```bash
 $ source environment/bin/activate
 ```
+for windows:
+```
+$ \venv\Scripts\activate.bat
+```
 4. Upgrade `pip`:
 ```bash
 $ pip install --upgrade pip
