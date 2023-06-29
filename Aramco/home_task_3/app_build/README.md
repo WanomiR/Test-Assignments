@@ -1,6 +1,6 @@
 # Instructions for building the app
-1. Install Python 3.10: [macOS](https://www.python.org/downloads/release/python-31011/) / [Windows](https://www.python.org/downloads/release/python-31011/)
-2. From the **project’s root directory**, create a new Python environment using Python version `3.10`:
+1. Install Python: [macOS](https://www.python.org/downloads/macos/) / [Windows](https://www.python.org/downloads/windows/)
+2. From the **project’s root directory**, create a new Python environment using `3.10` Python version:
 	> Note: `$` character marks the beginning of a command, you don’t need to use it in the command itself.
 
 	macOS
@@ -9,7 +9,8 @@ $ python3.10 -m venv environment
 ```
 	Windows
 ```
-$ py -3.10 -m venv environment
+$ pip install virtualenv
+$ virtualenv environment --python=python3.10
 ```
 3. Activate the newly created environment:
 	macOS
