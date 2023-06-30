@@ -9,7 +9,7 @@
 	$ conda env create -f requirements.yml
 	```
 
-3. Activate the newly created environment:
+3. Activate newly created environment:
 	```bash
 	$ conda activate environment
 	```
@@ -69,7 +69,7 @@
 	$ python3.10 -m venv environment
 	```
 
-3. Activate the newly created environment:
+3. Activate newly created environment:
 	```bash
 	$ source environment/bin/activate
 	```
