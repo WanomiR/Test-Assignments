@@ -6,8 +6,8 @@ dependencies:
   - python=3.10
   - pip
   - streamlit
+  - path.py
+  - pyinstaller
   - pip:
     - etna==1.15.0
-    - path.py
     - briefcase
-    - pyinstaller
