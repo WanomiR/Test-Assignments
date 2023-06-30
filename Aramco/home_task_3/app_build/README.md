@@ -37,7 +37,7 @@
 	```bash
 	$ pyinstaller --clean script.spec
 	```
-7. Conduct test runs with `briefcase`:
+7. Perform test runs with `briefcase`:
 	Run the app in developer mode:
 	```bash
 	$ briefcase dev
@@ -102,7 +102,7 @@
 	```bash
 	$ pyinstaller --clean script.spec
 	```
-9. Conduct test runs with `briefcase`:
+9. Perform test runs with `briefcase`:
 	Run application in developer mode:
 	```bash
 	$ briefcase dev
