@@ -6,7 +6,8 @@
 	> Note: `$` character marks the beginning of a command, you don’t need to use it in the command itself.
 
 	```bash
-	$ conda env create -f requirements.yml -n environment
+	$ conda update conda
+    $ conda env create -f requirements.yml -n environment
 	```
 
 3. Activate the newly created environment:
