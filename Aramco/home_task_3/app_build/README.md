@@ -17,8 +17,8 @@
    	```bash
     	$ conda install -c conda-forge streamlit pyinstaller
     	$ conda install -c anaconda path.py
-    	$ pip install etna==1.15.0 briefcase 
-    	```
+    	$ pip install etna==1.15.0 briefcase
+    ```
 4. Run the application script with Streamlit to make sure that it works:
 	```bash
 	$ cd srs/app
