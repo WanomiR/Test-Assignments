@@ -2,17 +2,23 @@
 ## Anaconda
 
 1. Install [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html)
-2. Navigate to the **project root directory** and create a new conda environment with dependencies specified in the `requirements.yml` file:
+2. Open the **project root directory** and create a new conda environment using `3.10` Python version:
 	> Note: `$` character marks the beginning of a command, you don’t need to use it in the command itself.
 
 	```bash
-    $ conda env create -f requirements.yml -n environment
+    	$ conda create -n environment python=3.10
 	```
 
 3. Activate the newly created environment:
 	```bash
 	$ conda activate environment
 	```
+4. Instll packages necessary for building the app:
+   	```bash
+    	$ conda install -c conda-forge streamlit pyinstaller
+    	$ conda install -c anaconda path.py
+    	$ pip install etna==1.15.0 briefcase 
+    	```
 4. Run the application script with Streamlit to make sure that it works:
 	```bash
 	$ cd srs/app
