@@ -6,7 +6,6 @@
 	> Note: `$` character marks the beginning of a command, you don’t need to use it in the command itself.
 
 	```bash
-	$ conda update conda
     $ conda env create -f requirements.yml -n environment
 	```
 
