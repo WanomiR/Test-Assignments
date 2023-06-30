@@ -15,7 +15,7 @@
 	```
 4. Instll packages necessary for building the app:
    	```bash
-    	$ conda install -c conda-forge streamlit pyinstaller
+    	$ conda install -c conda-forge streamlit matplotlib pyinstaller
     	$ conda install -c anaconda path.py
     	$ pip install etna==1.15.0 briefcase
     ```
